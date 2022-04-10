@@ -1,0 +1,15 @@
+C:\Users\kirik\source\repos\TimerForRecordings\TimerForRecordings\bin\Debug\TimerForRecordings.exe.config
+C:\Users\kirik\source\repos\TimerForRecordings\TimerForRecordings\bin\Debug\TimerForRecordings.exe
+C:\Users\kirik\source\repos\TimerForRecordings\TimerForRecordings\bin\Debug\TimerForRecordings.pdb
+C:\Users\kirik\source\repos\TimerForRecordings\TimerForRecordings\obj\Debug\TimerForRecordings.csprojAssemblyReference.cache
+C:\Users\kirik\source\repos\TimerForRecordings\TimerForRecordings\obj\Debug\MainWindow.g.cs
+C:\Users\kirik\source\repos\TimerForRecordings\TimerForRecordings\obj\Debug\App.g.cs
+C:\Users\kirik\source\repos\TimerForRecordings\TimerForRecordings\obj\Debug\TimerForRecordings_MarkupCompile.cache
+C:\Users\kirik\source\repos\TimerForRecordings\TimerForRecordings\obj\Debug\TimerForRecordings_MarkupCompile.lref
+C:\Users\kirik\source\repos\TimerForRecordings\TimerForRecordings\obj\Debug\MainWindow.baml
+C:\Users\kirik\source\repos\TimerForRecordings\TimerForRecordings\obj\Debug\TimerForRecordings.g.resources
+C:\Users\kirik\source\repos\TimerForRecordings\TimerForRecordings\obj\Debug\TimerForRecordings.Properties.Resources.resources
+C:\Users\kirik\source\repos\TimerForRecordings\TimerForRecordings\obj\Debug\TimerForRecordings.csproj.GenerateResource.cache
+C:\Users\kirik\source\repos\TimerForRecordings\TimerForRecordings\obj\Debug\TimerForRecordings.csproj.CoreCompileInputs.cache
+C:\Users\kirik\source\repos\TimerForRecordings\TimerForRecordings\obj\Debug\TimerForRecordings.exe
+C:\Users\kirik\source\repos\TimerForRecordings\TimerForRecordings\obj\Debug\TimerForRecordings.pdb

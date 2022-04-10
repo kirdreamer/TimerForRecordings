@@ -1,0 +1,56 @@
+﻿<Window x:Class="TimerForRecordings.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TimerForRecordings"
+        mc:Ignorable="d"
+        Title="Recording Timer" Height="500.011" Width="757.084" MinWidth="757.084" MinHeight="488.011">
+    <Grid x:Name="Grid" Background="#FF1F1F1F">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="41*"/>
+            <ColumnDefinition Width="334*"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="StartButt" Content="Start timer" HorizontalAlignment="Left" Height="40" Margin="10,0,0,12" VerticalAlignment="Bottom" Width="167" Background="White" FontSize="16" Click="StartButt_Click" Grid.ColumnSpan="2"/>
+        <Button x:Name="StopButt" Content="Stop timer" HorizontalAlignment="Left" Height="40" Margin="10,0,0,12" VerticalAlignment="Bottom" Width="167" Background="White" Click="StopButt_Click" FontSize="16" Visibility="Hidden" Grid.ColumnSpan="2"/>
+        <Button x:Name="PauseButt" Content="Pause" HorizontalAlignment="Left" Margin="125.5,0,0,12" Width="167" Background="White" FontSize="16" IsEnabled="False" Height="40" VerticalAlignment="Bottom" Click="PauseButt_Click" Grid.Column="1"/>
+        <Button x:Name="PointButt" Content="Create Record Point" HorizontalAlignment="Right" Margin="0,0,10,21" Width="187" Background="White" FontSize="16" IsEnabled="False" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="40" RenderTransformOrigin="0.428,0.205" VerticalAlignment="Bottom" Click="PointButt_Click" Grid.Column="1"/>
+        <Button x:Name="ResetCheckBox" Content="Uncheck all Tags" HorizontalAlignment="Right" Margin="0,0,10,111" Width="187" Background="White" FontSize="16" Click="ResetCheckBox_Click" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="40" RenderTransformOrigin="0.428,0.205" VerticalAlignment="Bottom" Grid.Column="1"/>
+        <Label Content="Timer:" HorizontalAlignment="Left" Margin="35,42,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18" Width="81" Grid.ColumnSpan="2"/>
+        <Label x:Name="dateTimer" Content="00:00:00" HorizontalAlignment="Left" Margin="67,10,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18" Loaded="Timer_Loaded" Grid.Column="1"/>
+        <Label x:Name="timerLoh" Content="00:00:00" HorizontalAlignment="Left" Margin="67.5,42,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18" Grid.Column="1"/>
+        <TextBox x:Name="textBoxer" HorizontalAlignment="Left" Height="54" Margin="126,334,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="166" FontSize="18" Grid.Column="1"/>
+        <Label Content="Video title" HorizontalAlignment="Left" Margin="35,336,0,0" VerticalAlignment="Top" Foreground="White" FontSize="20" RenderTransformOrigin="0.363,0.784" Height="54" Grid.ColumnSpan="2"/>
+        <ListBox x:Name="CheckedListBox" HorizontalAlignment="Right" Height="272" Margin="0,10,10,0" VerticalAlignment="Top" Width="187" Background="White" ItemsSource="{Binding TheList}" Padding="0,0,10,10" VerticalContentAlignment="Center" HorizontalContentAlignment="Stretch" Grid.Column="1">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <CheckBox IsChecked="{Binding IsSelected}" Content="{Binding TheText}"/>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Label Content="Add new Tag" HorizontalAlignment="Left" Margin="35,182,0,0" VerticalAlignment="Top" FontSize="20" Foreground="White" Grid.ColumnSpan="2" Height="54"/>
+        <TextBox x:Name="TagTextBoxer" HorizontalAlignment="Left" Height="54" Margin="126,182,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="166" FontSize="18" Grid.Column="1"/>
+        <Button x:Name="TagButt" Content="Accept" HorizontalAlignment="Left" Height="44" Margin="126,253,0,0" VerticalAlignment="Top" Width="166" Background="White" FontSize="16" Click="TagButt_Click" Grid.Column="1"/>
+        <Button x:Name="DeleteTagsButt" Content="Delete Selected Tags" HorizontalAlignment="Right" Height="40" Margin="0,0,10,66" VerticalAlignment="Bottom" Width="187" Background="White" FontSize="16" Click="DeleteTagsButt_Click" Grid.Column="1"/>
+        <Label Content="Program was developed by Kirill Bulanov" HorizontalAlignment="Right" VerticalAlignment="Bottom" Foreground="White" Grid.Column="1"/>
+        <Label Content="Set start time" HorizontalAlignment="Left" Margin="35,76,0,0" VerticalAlignment="Top" Foreground="White" FontSize="20" Grid.ColumnSpan="2" Height="35" Width="149"/>
+        <Button x:Name="PutTimeButt" Content="Accept" HorizontalAlignment="Left" Height="29" Margin="352,81,0,0" VerticalAlignment="Top" Width="102" FontSize="16" Click="PutTimeButt_Click" Grid.Column="1" RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="0.939"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="0.484"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Label Content="Hour" HorizontalAlignment="Left" Height="31" Margin="83.5,81,0,0" VerticalAlignment="Top" Width="46" Foreground="White" FontSize="16" Grid.Column="1"/>
+        <Label Content="Min" HorizontalAlignment="Left" Height="31" Margin="168.5,81,0,0" VerticalAlignment="Top" Width="44" Foreground="White" FontSize="16" Grid.Column="1"/>
+        <Label Content="Sec" HorizontalAlignment="Left" Height="31" Margin="251.5,81,0,0" VerticalAlignment="Top" Width="41" Foreground="White" FontSize="16" Grid.Column="1"/>
+        <TextBox x:Name="SecBoxer" HorizontalAlignment="Left" Height="31" Margin="292.5,81,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="39" FontSize="18" MaxLines="2147483645" MinLines="1" IsUndoEnabled="True" MaxLength="2" Grid.Column="1"/>
+        <TextBox x:Name="MinBoxer" HorizontalAlignment="Left" Height="31" Margin="212.5,81,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="39" FontSize="18" MaxLines="2147483645" MinLines="1" IsUndoEnabled="True" MaxLength="2" Grid.Column="1"/>
+        <TextBox x:Name="HourBoxer" HorizontalAlignment="Left" Height="31" Margin="129.5,81,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="39" FontSize="18" MaxLines="2147483645" MinLines="1" IsUndoEnabled="True" MaxLength="5" Grid.Column="1"/>
+        <Label Content="Current time:" HorizontalAlignment="Left" Margin="35,10,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18" Width="114" Grid.ColumnSpan="2"/>
+
+    </Grid>
+</Window>
